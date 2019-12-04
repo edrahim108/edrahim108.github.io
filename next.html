@@ -1,15 +1,42 @@
 <html>
 <head>
+  <meta charset="utf-8">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./master.css">
+  <style media="screen">
+  body {
+      background-color: #30b3f2;
+  }
+  h1 {
+    color: black;
+    text-align: center;
+  }
+  h2{
+    color: white;
+    text-align: center;
 
+
+  }
+
+
+  video {
+    width: 240px;
+  }
+  </style>
+
+
+  <title>AHMED IBRAHIMM Test</title>
+</head>
 <body>
-
+<h1 class="mt-5">AHMED IBRAHIMM Test</h1>
+<br>
+<h2>Your points:</h2>
+<br>
 <form name="form1" action="next.html" method="get">
-<table>
-    <tr>
-        <td id="here">test</td>
-    </tr>
-</table>
+        <h2 id="here">test</h2>
+
 </form>
+<button class="btn btn-info ml-5"type="button" name="button"><a href="./index.html">Back</a></button>
 <script>
   window.onload = function () {
     var url = document.location.href,

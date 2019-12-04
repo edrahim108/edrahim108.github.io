@@ -52,6 +52,11 @@
         z-index: 5;
         color: white;
     }
+
+
+    video {
+      width: 240px;
+    }
     </style>
 
 
@@ -74,9 +79,47 @@
     </form>
 
 </div class="col-9">
-<img data-toggle="modal" data-target="#homeVideo" class="img-responsive " src="http://www.gossettmktg.com/video/dangot.png" onclick="playVid()" />
+<video id="gossVideo" class="embed-responsive-item myVide1o" onclick="openFullscreen()" controls="controls">
+   <!-- poster="http://www.gossettmktg.com/video/dangot.png"> -->
+  <source src="http://www.gossettmktg.com/video/dangot.mp4" type="video/mp4">
+  <source src="http://www.gossettmktg.com/video/dangot.webm" type="video/webm">
+  <source src="http://www.gossettmktg.com/video/dangot.ogv" type="video/ogg">
+  <object type="application/x-shockwave-flash" data="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="353" height="190">
+    <param name="movie" value="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+    <param name="allowFullScreen" value="true">		<param name="wmode" value="transparent">
+    <param name="flashVars" value="config={'playlist':['http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.png',{'url':'http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.mp4','autoPlay':false}]}">
+    <img alt="Big Buck Bunny" src="http://www.gossettmktg.com/video/dangot.png" width="353" height="190" title="No video playback capabilities, please download the video below">
+  </object>
+</video>
+
+
+<video  id="gossVideo1"class="embed-responsive-item myVide1o" onclick="openFullscreen1()" controls="controls" >
+  <!-- poster="https://peach.blender.org/wp-content/uploads/bbb-splash.thumbnail.png?x23406"> -->
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  <object type="application/x-shockwave-flash" data="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="353" height="190">
+    <param name="movie" value="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+    <param name="allowFullScreen" value="true">		<param name="wmode" value="transparent">
+    <param name="flashVars" value="config={'playlist':['http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.png',{'url':'http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.mp4','autoPlay':false}]}">
+    <img alt="Big Buck Bunny" src="http://www.gossettmktg.com/video/dangot.png" width="353" height="190" title="No video playback capabilities, please download the video below">
+  </object>
+</video>
+
+
+<video  id="gossVideo2" class="embed-responsive-item myVide1o" onclick="openFullscreen2()" controls="controls" >
+<!-- poster="https://www.janes.com/images/assets/083/81083/EU-tank-breaks-cover-_ES18D5_.jpg"> -->
+  <source src="https://www.tutorialspoint.com/html5/foo.mp4" type="video/mp4">
+  <object type="application/x-shockwave-flash" data="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="353" height="190">
+    <param name="movie" value="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+    <param name="allowFullScreen" value="true">		<param name="wmode" value="transparent">
+    <param name="flashVars" value="config={'playlist':['http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.png',{'url':'http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.mp4','autoPlay':false}]}">
+    <img alt="Big Buck Bunny" src="http://www.gossettmktg.com/video/dangot.png" width="353" height="190" title="No video playback capabilities, please download the video below">
+  </object>
+</video>
+
+
+<!-- <img data-toggle="modal" data-target="#homeVideo" class="img-responsive " src="http://www.gossettmktg.com/video/dangot.png" onclick="playVid()" />
 <img  data-toggle="modal" data-target="#homeVideo1" class=" img-responsive" src="https://peach.blender.org/wp-content/uploads/bbb-splash.thumbnail.png?x23406" onclick="playVid1()" />
-<img data-toggle="modal" data-target="#homeVideo2" class="img-responsive" src="https://www.janes.com/images/assets/083/81083/EU-tank-breaks-cover-_ES18D5_.jpg" onclick="playVid2()" />
+<img data-toggle="modal" data-target="#homeVideo2" class="img-responsive" src="https://www.janes.com/images/assets/083/81083/EU-tank-breaks-cover-_ES18D5_.jpg" onclick="playVid2()" /> -->
 </section >
 
 
@@ -84,73 +127,47 @@
 
 
 
-  <div class="modal fade" id="homeVideo" tabindex="0" role="dialog" aria-labelledby="myModalLabel">
+  <!-- <div class="modal fade" id="homeVideo" tabindex="0" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content" >
         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="pauseVid()">X</button>
-        <div class="embed-responsive embed-responsive-16by9">
-          <video id="gossVideo" class="embed-responsive-item myVide1o" controls="controls" poster="http://www.gossettmktg.com/video/dangot.png">
-            <source src="http://www.gossettmktg.com/video/dangot.mp4" type="video/mp4">
-            <source src="http://www.gossettmktg.com/video/dangot.webm" type="video/webm">
-            <source src="http://www.gossettmktg.com/video/dangot.ogv" type="video/ogg">
-            <object type="application/x-shockwave-flash" data="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="353" height="190">
-              <param name="movie" value="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
-              <param name="allowFullScreen" value="true">		<param name="wmode" value="transparent">
-              <param name="flashVars" value="config={'playlist':['http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.png',{'url':'http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.mp4','autoPlay':false}]}">
-              <img alt="Big Buck Bunny" src="http://www.gossettmktg.com/video/dangot.png" width="353" height="190" title="No video playback capabilities, please download the video below">
-            </object>
-          </video>
-        </div>
+        <div class="embed-responsive embed-responsive-16by9"> -->
+
+        <!-- </div>
       </div>
     </div>
   </div>
+ -->
 
 
 
 
-
-
+<!--
   <div class="modal fade" id="homeVideo1" tabindex="0" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="pauseVid1()">X</button>
-        <div class="embed-responsive embed-responsive-16by9">
-          <video  class="embed-responsive-item myVide1o" controls="controls" poster="https://peach.blender.org/wp-content/uploads/bbb-splash.thumbnail.png?x23406">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            <object type="application/x-shockwave-flash" data="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="353" height="190">
-              <param name="movie" value="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
-              <param name="allowFullScreen" value="true">		<param name="wmode" value="transparent">
-              <param name="flashVars" value="config={'playlist':['http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.png',{'url':'http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.mp4','autoPlay':false}]}">
-              <img alt="Big Buck Bunny" src="http://www.gossettmktg.com/video/dangot.png" width="353" height="190" title="No video playback capabilities, please download the video below">
-            </object>
-          </video>
-        </div>
+        <div class="embed-responsive embed-responsive-16by9"> -->
+
+        <!-- </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 
 
 
-  <div class="modal fade" id="homeVideo2" tabindex="0" role="dialog" aria-labelledby="myModalLabel">
+  <!-- <div class="modal fade" id="homeVideo2" tabindex="0" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="pauseVid2()">X</button>
-        <div class="embed-responsive embed-responsive-16by9">
-          <video  class="embed-responsive-item myVide1o" controls="controls" poster="https://www.janes.com/images/assets/083/81083/EU-tank-breaks-cover-_ES18D5_.jpg">
-            <source src="https://www.tutorialspoint.com/html5/foo.mp4" type="video/mp4">
-            <object type="application/x-shockwave-flash" data="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="353" height="190">
-              <param name="movie" value="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
-              <param name="allowFullScreen" value="true">		<param name="wmode" value="transparent">
-              <param name="flashVars" value="config={'playlist':['http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.png',{'url':'http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.mp4','autoPlay':false}]}">
-              <img alt="Big Buck Bunny" src="http://www.gossettmktg.com/video/dangot.png" width="353" height="190" title="No video playback capabilities, please download the video below">
-            </object>
-          </video>
-        </div>
+        <div class="embed-responsive embed-responsive-16by9"> -->
+
+        <!-- </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <script>
@@ -206,6 +223,46 @@ function testJS() {
       url = './next.html?name=' + encodeURIComponent(b);
 
   document.location.href = url;
+}
+
+/* Get the element you want displayed in fullscreen */
+var elem = document.getElementById("gossVideo");
+var elem1 = document.getElementById("gossVideo1");
+var elem2= document.getElementById("gossVideo2");
+
+/* Function to open fullscreen mode */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+  elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+  elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+  elem.msRequestFullscreen();
+  }
+}
+function openFullscreen1() {
+  if (elem1.requestFullscreen) {
+  elem1.requestFullscreen();
+} else if (elem1.mozRequestFullScreen) { /* Firefox */
+  elem1.mozRequestFullScreen();
+} else if (elem1.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+  elem1.webkitRequestFullscreen();
+} else if (elem1.msRequestFullscreen) { /* IE/Edge */
+  elem1.msRequestFullscreen();
+  }
+}
+function openFullscreen2() {
+  if (elem2.requestFullscreen) {
+  elem2.requestFullscreen();
+} else if (elem2.mozRequestFullScreen) { /* Firefox */
+  elem2.mozRequestFullScreen();
+} else if (elem2.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+  elem2.webkitRequestFullscreen();
+} else if (elem2.msRequestFullscreen) { /* IE/Edge */
+  elem2.msRequestFullscreen();
+  }
 }
 </script>
 
